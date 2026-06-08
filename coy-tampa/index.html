@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>C.O.Y. Tampa, Casa Del Alfarero</title>
+    <meta
+      name="description"
+      content="C.O.Y. Tampa, Casa Del Alfarero church website with service updates, events, gallery, and contact information."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#home" aria-label="C.O.Y. Tampa, Casa Del Alfarero home">
+        <span class="brand-mark">C</span>
+        <span>
+          <strong>C.O.Y. Tampa</strong>
+          <small>Casa Del Alfarero</small>
+        </span>
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="menu-button" type="button" aria-label="Open menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </header>
+
+    <main>
+      <section id="home" class="hero">
+        <div class="hero-bg" role="img" aria-label="Welcoming church community gathering"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <p class="eyebrow">Welcome home</p>
+          <h1>C.O.Y. Tampa, Casa Del Alfarero</h1>
+          <p class="hero-copy">
+            A blue-and-white house of worship, community, prayer, and purpose in Tampa.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#contact">Plan a Visit</a>
+            <button class="button secondary" type="button" data-open-signup>Get SMS Updates</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="info-band" aria-label="Quick service information">
+        <article>
+          <span>Services</span>
+          <strong>Sunday Worship</strong>
+          <p>Join us for worship, prayer, and a fresh word for the week.</p>
+        </article>
+        <article>
+          <span>Community</span>
+          <strong>Youth and Family</strong>
+          <p>Gatherings designed to strengthen every generation.</p>
+        </article>
+        <article>
+          <span>Updates</span>
+          <strong>Events by Text</strong>
+          <p>Sign up for SMS reminders about upcoming services and church events.</p>
+        </article>
+      </section>
+
+      <section id="about" class="section about-section">
+        <div class="section-heading">
+          <p class="eyebrow">About us</p>
+          <h2>A place shaped by faith and family.</h2>
+        </div>
+        <div class="about-grid">
+          <div>
+            <p>
+              Casa Del Alfarero means the Potter's House. Our heart is to welcome people into
+              a community where lives are restored, families are strengthened, and faith becomes
+              part of everyday life.
+            </p>
+            <p>
+              Whether you are visiting for the first time or looking for a church home in Tampa,
+              there is a seat for you here.
+            </p>
+          </div>
+          <div class="values">
+            <div>
+              <strong>Worship</strong>
+              <span>Christ-centered gatherings with prayer and praise.</span>
+            </div>
+            <div>
+              <strong>Formation</strong>
+              <span>Teaching that helps people grow in faith and purpose.</span>
+            </div>
+            <div>
+              <strong>Care</strong>
+              <span>A loving community for families, youth, and neighbors.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="gallery" class="section gallery-section">
+        <div class="section-heading gallery-heading">
+          <div>
+            <p class="eyebrow">Instagram gallery</p>
+            <h2>Life at Casa Del Alfarero</h2>
+          </div>
+          <a class="text-link" href="https://www.instagram.com/coytampa/" target="_blank" rel="noreferrer">
+            @coytampa
+          </a>
+        </div>
+        <div class="gallery-status" data-gallery-status>Loading recent photos...</div>
+        <div class="gallery-grid" data-gallery-grid aria-live="polite"></div>
+      </section>
+
+      <section id="contact" class="section contact-section">
+        <div class="section-heading">
+          <p class="eyebrow">Contact</p>
+          <h2>Connect with us.</h2>
+        </div>
+        <div class="contact-layout">
+          <form class="contact-form" data-contact-form>
+            <label>
+              Name
+              <input type="text" name="name" autocomplete="name" required />
+            </label>
+            <label>
+              Phone
+              <input type="tel" name="phone" autocomplete="tel" required />
+            </label>
+            <label>
+              Message
+              <textarea name="message" rows="5" required></textarea>
+            </label>
+            <button class="button primary" type="submit">Send Message</button>
+            <p class="form-note" data-contact-note></p>
+          </form>
+          <aside class="contact-card">
+            <strong>C.O.Y. Tampa, Casa Del Alfarero</strong>
+            <p>Tampa, Florida</p>
+            <p>Use this space for your church address, phone number, email, and service times.</p>
+            <button class="button secondary" type="button" data-open-signup>Sign Up for Texts</button>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>© <span data-year></span> C.O.Y. Tampa, Casa Del Alfarero</span>
+      <a href="#home">Back to top</a>
+    </footer>
+
+    <div class="modal-shell" data-signup-modal aria-hidden="true">
+      <div class="modal-backdrop" data-close-signup></div>
+      <section class="signup-modal" role="dialog" aria-modal="true" aria-labelledby="signup-title">
+        <button class="modal-close" type="button" aria-label="Close signup" data-close-signup>×</button>
+        <p class="eyebrow">Stay connected</p>
+        <h2 id="signup-title">Welcome to C.O.Y. Tampa, Casa Del Alfarero</h2>
+        <p>
+          Enter your phone number to receive SMS updates about upcoming services and events.
+        </p>
+        <form data-sms-form>
+          <label>
+            Phone number
+            <input
+              type="tel"
+              name="phone"
+              inputmode="tel"
+              autocomplete="tel"
+              placeholder="(813) 555-0123"
+              required
+            />
+          </label>
+          <label class="checkbox-row">
+            <input type="checkbox" name="consent" required />
+            <span>I agree to receive SMS updates from C.O.Y. Tampa, Casa Del Alfarero.</span>
+          </label>
+          <button class="button primary full" type="submit">Sign Me Up</button>
+          <p class="form-note" data-sms-note></p>
+        </form>
+      </section>
+    </div>
+
+    <script src="./config.js?v=2"></script>
+    <script src="./script.js?v=2"></script>
+  </body>
+</html>
