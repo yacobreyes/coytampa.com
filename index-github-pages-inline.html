@@ -543,7 +543,14 @@ textarea:focus {
 }
 
 .hidden-field {
-  display: none;
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  clip: rect(0 0 0 0) !important;
+  white-space: nowrap !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
 }
 
 @media (max-width: 820px) {
@@ -781,7 +788,7 @@ textarea:focus {
         </p>
         <form name="sms-signup" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-sms-form>
           <input type="hidden" name="form-name" value="sms-signup" />
-          <label class="hidden-field">
+          <label class="hidden-field" aria-hidden="true">
             Do not fill this out
             <input name="bot-field" />
           </label>
