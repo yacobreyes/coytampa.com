@@ -1,6 +1,8 @@
 backend:
   name: git-gateway
   branch: main
+  identity_url: "https://coytampa.com/.netlify/identity"
+  gateway_url: "https://coytampa.com/.netlify/git"
 
 media_folder: "assets/uploads"
 public_folder: "/assets/uploads"
@@ -8,8 +10,8 @@ public_folder: "/assets/uploads"
 editor:
   preview: false
 
-site_url: "https://www.coytampa.com"
-display_url: "https://www.coytampa.com"
+site_url: "https://coytampa.com"
+display_url: "https://coytampa.com"
 logo_url: "/assets/coy-logo.jpg"
 
 collections:
