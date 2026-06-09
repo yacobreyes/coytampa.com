@@ -39,7 +39,7 @@ const sampleGallery = [
   {
     caption: "Missionary outreach",
     permalink: "",
-    media_url: "./assets/facebook/facebook-06.jpg"
+    media_url: "./assets/instagram/instagram-07.jpg"
   }
 ];
 
