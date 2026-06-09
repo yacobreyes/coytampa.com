@@ -1,9 +1,13 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: yacobreyes/coytampa.com
   branch: main
 
 media_folder: "assets/uploads"
 public_folder: "/assets/uploads"
+
+editor:
+  preview: false
 
 site_url: "https://www.coytampa.com"
 display_url: "https://www.coytampa.com"

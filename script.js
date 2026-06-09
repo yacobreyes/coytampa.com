@@ -51,27 +51,27 @@ const defaultSiteContent = {
     photos: [
       {
         caption: "Biblical Feasts",
-        media_url: "./assets/facebook/facebook-01.jpg"
+        media_url: "/assets/facebook/facebook-01.jpg"
       },
       {
         caption: "Youth service",
-        media_url: "./assets/facebook/facebook-02.jpg"
+        media_url: "/assets/facebook/facebook-02.jpg"
       },
       {
         caption: "Women's ministry",
-        media_url: "./assets/facebook/facebook-03.jpg"
+        media_url: "/assets/facebook/facebook-03.jpg"
       },
       {
         caption: "Congregational service",
-        media_url: "./assets/facebook/facebook-04.jpg"
+        media_url: "/assets/facebook/facebook-04.jpg"
       },
       {
         caption: "Men's ministry",
-        media_url: "./assets/facebook/facebook-05.jpg"
+        media_url: "/assets/facebook/facebook-05.jpg"
       },
       {
         caption: "Missionary outreach",
-        media_url: "./assets/instagram/instagram-07.jpg"
+        media_url: "/assets/instagram/instagram-07.jpg"
       }
     ]
   },
