@@ -137,7 +137,7 @@ function normalizePhone(value) {
   return value.replace(/[^\d+]/g, "");
 }
 
-smsForm.addEventListener("submit", (event) => {
+smsForm.addEventListener("submit", async (event) => {
   event.preventDefault();
   const formData = new FormData(smsForm);
   const phone = normalizePhone(formData.get("phone") || "");
@@ -147,13 +147,25 @@ smsForm.addEventListener("submit", (event) => {
     return;
   }
 
-  const signups = JSON.parse(localStorage.getItem("coySmsSignups") || "[]");
-  signups.push({ phone, createdAt: new Date().toISOString() });
-  localStorage.setItem("coySmsSignups", JSON.stringify(signups));
-  localStorage.setItem("coySmsPromptSeen", "true");
+  formData.set("phone", phone);
+  formData.set("form-name", "sms-signup");
 
-  smsNote.textContent = "Thank you. You are on the update list.";
-  setTimeout(() => closeSignup(false), 900);
+  try {
+    const response = await fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData).toString()
+    });
+
+    if (!response.ok) throw new Error("Form submission failed");
+
+    localStorage.setItem("coySmsPromptSeen", "true");
+    smsNote.textContent = "Thank you. You are on the update list.";
+    smsForm.reset();
+    setTimeout(() => closeSignup(false), 900);
+  } catch (error) {
+    smsNote.textContent = "Thank you. If this does not appear in Netlify, refresh and try again.";
+  }
 });
 
 contactForm.addEventListener("submit", (event) => {

@@ -174,7 +174,12 @@
         <p>
           Enter your phone number to receive SMS updates about upcoming services and events.
         </p>
-        <form data-sms-form>
+        <form name="sms-signup" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-sms-form>
+          <input type="hidden" name="form-name" value="sms-signup" />
+          <label class="hidden-field">
+            Do not fill this out
+            <input name="bot-field" />
+          </label>
           <label>
             Phone number
             <input
