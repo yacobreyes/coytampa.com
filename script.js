@@ -12,24 +12,34 @@ const galleryStatus = document.querySelector("[data-gallery-status]");
 
 const sampleGallery = [
   {
-    caption: "Sunday worship",
-    permalink: "#gallery",
-    media_url: "./assets/hero-coy-tampa.png"
+    caption: "Biblical Feasts",
+    permalink: "",
+    media_url: "./assets/facebook/facebook-01.jpg"
   },
   {
-    caption: "Family gathering",
-    permalink: "#gallery",
-    media_url: "./assets/hero-coy-tampa.png"
+    caption: "Youth service",
+    permalink: "",
+    media_url: "./assets/facebook/facebook-02.jpg"
   },
   {
-    caption: "Prayer night",
-    permalink: "#gallery",
-    media_url: "./assets/hero-coy-tampa.png"
+    caption: "Women's ministry",
+    permalink: "",
+    media_url: "./assets/facebook/facebook-03.jpg"
   },
   {
-    caption: "Community event",
-    permalink: "#gallery",
-    media_url: "./assets/hero-coy-tampa.png"
+    caption: "Congregational service",
+    permalink: "",
+    media_url: "./assets/facebook/facebook-04.jpg"
+  },
+  {
+    caption: "Men's ministry",
+    permalink: "",
+    media_url: "./assets/facebook/facebook-05.jpg"
+  },
+  {
+    caption: "Missionary outreach",
+    permalink: "",
+    media_url: "./assets/facebook/facebook-06.jpg"
   }
 ];
 
@@ -111,7 +121,7 @@ contactForm.addEventListener("submit", (event) => {
 });
 
 async function loadInstagramPhotos() {
-  renderGallery(sampleGallery, "Follow @coytampa on Instagram for recent photos and updates.");
+  renderGallery(sampleGallery, "Photos from C.O.Y. Tampa Casa Del Alfarero.");
 }
 
 function renderGallery(items, message) {
@@ -119,12 +129,9 @@ function renderGallery(items, message) {
   galleryStatus.textContent = message;
 
   items.forEach((item, index) => {
-    const link = document.createElement("a");
-    link.className = "gallery-item";
-    link.href = item.permalink || "#gallery";
-    link.target = item.permalink && item.permalink !== "#gallery" ? "_blank" : "_self";
-    link.rel = "noreferrer";
-    link.style.setProperty("--focus-x", `${35 + (index % 4) * 10}%`);
+    const card = document.createElement("article");
+    card.className = "gallery-item";
+    card.style.setProperty("--focus-x", `${35 + (index % 4) * 10}%`);
 
     const img = document.createElement("img");
     img.src = item.media_url || item.thumbnail_url;
@@ -132,10 +139,10 @@ function renderGallery(items, message) {
     img.loading = "lazy";
 
     const caption = document.createElement("span");
-    caption.textContent = item.caption ? item.caption.slice(0, 70) : "View on Instagram";
+    caption.textContent = item.caption ? item.caption.slice(0, 70) : "C.O.Y. Tampa photo";
 
-    link.append(img, caption);
-    galleryGrid.append(link);
+    card.append(img, caption);
+    galleryGrid.append(card);
   });
 }
 

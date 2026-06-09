@@ -397,10 +397,6 @@ h2 {
   line-height: 1.25;
 }
 
-.gallery-item:hover img {
-  transform: scale(1.05);
-}
-
 .contact-form {
   display: grid;
   gap: 16px;
