@@ -9,6 +9,7 @@
       content="C.O.Y. Tampa, Casa Del Alfarero church website with service updates, events, gallery, and contact information."
     />
     <link rel="stylesheet" href="./styles.css" />
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   </head>
   <body>
     <header class="site-header">
@@ -38,9 +39,9 @@
         <div class="hero-overlay"></div>
         <div class="hero-content">
           <img class="hero-logo" src="./assets/coy-logo.jpg" alt="Casa Del Alfarero C.O.Y. Tampa logo" />
-          <p class="eyebrow">Welcome home</p>
-          <h1>C.O.Y. Tampa, Casa Del Alfarero</h1>
-          <p class="hero-copy">
+          <p class="eyebrow" data-content="hero.eyebrow">Welcome home</p>
+          <h1 data-content="hero.title">C.O.Y. Tampa, Casa Del Alfarero</h1>
+          <p class="hero-copy" data-content="hero.copy">
             We are a Messianic congregation in Tampa, Florida. We observe Shabbat and the
             Biblical Feasts.
           </p>
@@ -53,34 +54,34 @@
 
       <section class="info-band" aria-label="Quick service information">
         <article>
-          <span>Friday night</span>
-          <strong>8:00 PM</strong>
-          <p>Begin Shabbat with worship, prayer, and a sermon from our pastor.</p>
+          <span data-content="services.0.label">Friday night</span>
+          <strong data-content="services.0.time">8:00 PM</strong>
+          <p data-content="services.0.description">Begin Shabbat with worship, prayer, and a sermon from our pastor.</p>
         </article>
         <article>
-          <span>Saturday morning</span>
-          <strong>11:00 AM</strong>
-          <p>Gather with the congregation for our Chumash studies, worship, and fellowship.</p>
+          <span data-content="services.1.label">Saturday morning</span>
+          <strong data-content="services.1.time">11:00 AM</strong>
+          <p data-content="services.1.description">Gather with the congregation for our Chumash studies, worship, and fellowship.</p>
         </article>
         <article>
-          <span>Saturday afternoon</span>
-          <strong>3:30 PM</strong>
-          <p>Continue Shabbat with an afternoon service led by our men's, women's, youth, or children's ministries.</p>
+          <span data-content="services.2.label">Saturday afternoon</span>
+          <strong data-content="services.2.time">3:30 PM</strong>
+          <p data-content="services.2.description">Continue Shabbat with an afternoon service led by our men's, women's, youth, or children's ministries.</p>
         </article>
       </section>
 
       <section id="about" class="section about-section">
         <div class="section-heading">
-          <p class="eyebrow">About us</p>
-          <h2>A place shaped by faith and family.</h2>
+          <p class="eyebrow" data-content="about.eyebrow">About us</p>
+          <h2 data-content="about.heading">A place shaped by faith and family.</h2>
         </div>
         <div class="about-grid">
           <div>
-            <p>
+            <p data-content="about.paragraphs.0">
               Casa Del Alfarero means the Potter's House. We are a Messianic congregation
               observing the Biblical Feasts, Shabbat, and a life of worship rooted in Scripture.
             </p>
-            <p>
+            <p data-content="about.paragraphs.1">
               Whether you are visiting for the first time or looking for a congregation in Tampa,
               there is a seat for you here on Friday at 8:00 PM, Saturday at 11:00 AM, and
               Saturday at 3:30 PM.
@@ -113,18 +114,25 @@
       <section id="gallery" class="section gallery-section">
         <div class="section-heading gallery-heading">
           <div>
-            <p class="eyebrow">Photo gallery</p>
-            <h2>Life at Casa Del Alfarero</h2>
+            <p class="eyebrow" data-content="gallery.eyebrow">Photo gallery</p>
+            <h2 data-content="gallery.heading">Life at Casa Del Alfarero</h2>
+            <p class="gallery-follow">
+              <span data-content="gallery.followPrefix">Follow us on</span>
+              <a href="https://www.instagram.com/coytampa/" target="_blank" rel="noreferrer">
+                @coytampa
+              </a>
+              <span data-content="gallery.followSuffix">for more.</span>
+            </p>
           </div>
         </div>
-        <div class="gallery-status" data-gallery-status>Loading recent photos...</div>
+        <div class="gallery-status" data-gallery-status hidden></div>
         <div class="gallery-grid" data-gallery-grid aria-live="polite"></div>
       </section>
 
       <section id="contact" class="section contact-section">
         <div class="section-heading">
-          <p class="eyebrow">Contact</p>
-          <h2>Connect with us.</h2>
+          <p class="eyebrow" data-content="contact.eyebrow">Contact</p>
+          <h2 data-content="contact.heading">Connect with us.</h2>
         </div>
         <div class="contact-layout">
           <form class="contact-form" data-contact-form>
@@ -144,9 +152,8 @@
             <p class="form-note" data-contact-note></p>
           </form>
           <aside class="contact-card">
-            <strong>C.O.Y. Tampa, Casa Del Alfarero</strong>
-            <p>Tampa, Florida</p>
-            <p>Use this space for your church address, phone number, email, and service times.</p>
+            <strong data-content="contact.cardTitle">C.O.Y. Tampa, Casa Del Alfarero</strong>
+            <p data-content="contact.cardText">Stay in the know about all our services and events.</p>
             <button class="button secondary" type="button" data-open-signup>Sign Up for Texts</button>
           </aside>
         </div>
@@ -191,5 +198,16 @@
 
     <script src="./config.js?v=2"></script>
     <script src="./script.js?v=2"></script>
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", (user) => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    </script>
   </body>
 </html>

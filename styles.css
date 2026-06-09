@@ -124,7 +124,7 @@ a {
 }
 
 .hero-bg {
-  background-image: url("./assets/hero-coy-tampa.png");
+  background-image: url("./assets/facebook/facebook-02.jpg");
   background-position: center;
   background-size: cover;
   transform: scale(1.02);
@@ -340,6 +340,19 @@ h2 {
 .gallery-heading {
   justify-content: space-between;
   width: 100%;
+}
+
+.gallery-follow {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-weight: 750;
+}
+
+.gallery-follow a {
+  color: var(--blue-700);
+  font-weight: 900;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
 }
 
 .text-link {

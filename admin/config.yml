@@ -1,0 +1,67 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+site_url: "https://www.coytampa.com"
+display_url: "https://www.coytampa.com"
+logo_url: "/assets/coy-logo.jpg"
+
+collections:
+  - name: "site"
+    label: "Website"
+    files:
+      - name: "homepage"
+        label: "Homepage Content"
+        file: "content/site.json"
+        format: "json"
+        fields:
+          - label: "Welcome Section"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Small Text", name: "eyebrow", widget: "string" }
+              - { label: "Main Title", name: "title", widget: "string" }
+              - { label: "Welcome Message", name: "copy", widget: "text" }
+          - label: "Service Times"
+            name: "services"
+            widget: "list"
+            min: 3
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Time", name: "time", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+          - label: "About Section"
+            name: "about"
+            widget: "object"
+            fields:
+              - { label: "Small Text", name: "eyebrow", widget: "string" }
+              - { label: "Heading", name: "heading", widget: "string" }
+              - label: "Paragraphs"
+                name: "paragraphs"
+                widget: "list"
+                field: { label: "Paragraph", name: "paragraph", widget: "text" }
+          - label: "Photo Gallery"
+            name: "gallery"
+            widget: "object"
+            fields:
+              - { label: "Small Text", name: "eyebrow", widget: "string" }
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Follow Text Before Link", name: "followPrefix", widget: "string" }
+              - { label: "Follow Text After Link", name: "followSuffix", widget: "string" }
+              - label: "Photos"
+                name: "photos"
+                widget: "list"
+                fields:
+                  - { label: "Caption", name: "caption", widget: "string" }
+                  - { label: "Photo", name: "media_url", widget: "image" }
+          - label: "Contact Section"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "Small Text", name: "eyebrow", widget: "string" }
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Signup Card Title", name: "cardTitle", widget: "string" }
+              - { label: "Signup Card Text", name: "cardText", widget: "text" }
