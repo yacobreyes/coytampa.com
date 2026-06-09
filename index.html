@@ -35,6 +35,224 @@
 
     <main>
       <section id="home" class="hero">
+        <div class="hero-bg" role="img" aria-label="Hands shaping clay"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <img class="hero-logo" src="./assets/coy-logo.jpg" alt="Casa Del Alfarero C.O.Y. Tampa logo" />
+          <p class="eyebrow" data-content="hero.eyebrow">Welcome home</p>
+          <h1 data-content="hero.title">C.O.Y. Tampa, Casa Del Alfarero</h1>
+          <p class="hero-copy" data-content="hero.copy">
+            We are a Messianic congregation in Tampa, Florida. We observe Shabbat and the
+            Biblical Feasts.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#contact">Plan a Visit</a>
+            <button class="button secondary" type="button" data-open-signup>Get SMS Updates</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="info-band" aria-label="Quick service information">
+        <article>
+          <span data-content="services.0.label">Friday night</span>
+          <strong data-content="services.0.time">8:00 PM</strong>
+          <p data-content="services.0.description">Begin Shabbat with worship, prayer, and a sermon from our pastor.</p>
+        </article>
+        <article>
+          <span data-content="services.1.label">Saturday morning</span>
+          <strong data-content="services.1.time">11:00 AM</strong>
+          <p data-content="services.1.description">Gather with the congregation for our Chumash studies, worship, and fellowship.</p>
+        </article>
+        <article>
+          <span data-content="services.2.label">Saturday afternoon</span>
+          <strong data-content="services.2.time">3:30 PM</strong>
+          <p data-content="services.2.description">Continue Shabbat with an afternoon service led by our men's, women's, youth, or children's ministries.</p>
+        </article>
+      </section>
+
+      <section id="about" class="section about-section">
+        <div class="section-heading">
+          <p class="eyebrow" data-content="about.eyebrow">About us</p>
+          <h2 data-content="about.heading">A place shaped by faith and family.</h2>
+        </div>
+        <div class="about-grid">
+          <div>
+            <p data-content="about.paragraphs.0">
+              Casa Del Alfarero means the Potter's House. We are a Messianic congregation
+              observing the Biblical Feasts, Shabbat, and a life of worship rooted in Scripture.
+            </p>
+            <p data-content="about.paragraphs.1">
+              Whether you are visiting for the first time or looking for a congregation in Tampa,
+              there is a seat for you here on Friday at 8:00 PM, Saturday at 11:00 AM, and
+              Saturday at 3:30 PM.
+            </p>
+            <figure class="pastor-photo">
+              <img
+                src="./assets/pastor-elihu-kathy.jpg"
+                alt="Pastor Eliu Reyes and his wife Kathy"
+              />
+              <figcaption>Pastor Eliu Reyes and his wife, Kathy</figcaption>
+            </figure>
+          </div>
+          <div class="values">
+            <div>
+              <strong>Worship</strong>
+              <span>Messianic worship, prayer, and praise centered on Yahweh's Word.</span>
+            </div>
+            <div>
+              <strong>Biblical Feasts</strong>
+              <span>We observe the appointed times and teach their meaning for our walk.</span>
+            </div>
+            <div>
+              <strong>Shabbat</strong>
+              <span>Weekly services on Friday evening and throughout Saturday.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="gallery" class="section gallery-section">
+        <div class="section-heading gallery-heading">
+          <div>
+            <p class="eyebrow" data-content="gallery.eyebrow">Photo gallery</p>
+            <h2 data-content="gallery.heading">Life at Casa Del Alfarero</h2>
+            <p class="gallery-follow">
+              <span data-content="gallery.followPrefix">Follow us on</span>
+              <a href="https://www.instagram.com/coytampa/" target="_blank" rel="noreferrer">
+                @coytampa
+              </a>
+              <span data-content="gallery.followSuffix">for more.</span>
+            </p>
+          </div>
+        </div>
+        <div class="gallery-status" data-gallery-status hidden></div>
+        <div class="gallery-grid" data-gallery-grid aria-live="polite"></div>
+      </section>
+
+      <section id="contact" class="section contact-section">
+        <div class="section-heading">
+          <p class="eyebrow" data-content="contact.eyebrow">Contact</p>
+          <h2 data-content="contact.heading">Connect with us.</h2>
+        </div>
+        <div class="contact-layout">
+          <form class="contact-form" data-contact-form>
+            <label>
+              Name
+              <input type="text" name="name" autocomplete="name" required />
+            </label>
+            <label>
+              Phone
+              <input type="tel" name="phone" autocomplete="tel" required />
+            </label>
+            <label>
+              Message
+              <textarea name="message" rows="5" required></textarea>
+            </label>
+            <button class="button primary" type="submit">Send Message</button>
+            <p class="form-note" data-contact-note></p>
+          </form>
+          <aside class="contact-card">
+            <strong data-content="contact.cardTitle">C.O.Y. Tampa, Casa Del Alfarero</strong>
+            <p data-content="contact.cardText">Stay in the know about all our services and events.</p>
+            <button class="button secondary" type="button" data-open-signup>Sign Up for Texts</button>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>© <span data-year></span> C.O.Y. Tampa, Casa Del Alfarero</span>
+      <a href="#home">Back to top</a>
+    </footer>
+
+    <div class="modal-shell" data-signup-modal aria-hidden="true">
+      <div class="modal-backdrop" data-close-signup></div>
+      <section class="signup-modal" role="dialog" aria-modal="true" aria-labelledby="signup-title">
+        <button class="modal-close" type="button" aria-label="Close signup" data-close-signup>×</button>
+        <p class="eyebrow">Stay connected</p>
+        <h2 id="signup-title">Welcome to C.O.Y. Tampa, Casa Del Alfarero</h2>
+        <p>
+          Enter your phone number to receive SMS updates about upcoming services and events.
+        </p>
+        <form name="sms-signup" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-sms-form>
+          <input type="hidden" name="form-name" value="sms-signup" />
+          <label class="hidden-field" aria-hidden="true">
+            Do not fill this out
+            <input name="bot-field" />
+          </label>
+          <label>
+            Phone number
+            <input
+              type="tel"
+              name="phone"
+              inputmode="tel"
+              autocomplete="tel"
+              placeholder="(813) 555-0123"
+              required
+            />
+          </label>
+          <label class="checkbox-row">
+            <input type="checkbox" name="consent" required />
+            <span>I agree to receive SMS updates from C.O.Y. Tampa, Casa Del Alfarero.</span>
+          </label>
+          <button class="button primary full" type="submit">Sign Me Up</button>
+          <p class="form-note" data-sms-note></p>
+        </form>
+      </section>
+    </div>
+
+    <script src="./config.js?v=2"></script>
+    <script src="./script.js?v=2"></script>
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", (user) => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>C.O.Y. Tampa, Casa Del Alfarero</title>
+    <meta
+      name="description"
+      content="C.O.Y. Tampa, Casa Del Alfarero church website with service updates, events, gallery, and contact information."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#home" aria-label="C.O.Y. Tampa, Casa Del Alfarero home">
+        <img class="brand-logo" src="./assets/coy-logo.jpg" alt="Casa Del Alfarero C.O.Y. Tampa logo" />
+        <span>
+          <strong>C.O.Y. Tampa</strong>
+          <small>Casa Del Alfarero</small>
+        </span>
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="menu-button" type="button" aria-label="Open menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </header>
+
+    <main>
+      <section id="home" class="hero">
         <div class="hero-bg" role="img" aria-label="Welcoming church community gathering"></div>
         <div class="hero-overlay"></div>
         <div class="hero-content">
