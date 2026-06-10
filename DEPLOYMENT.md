@@ -52,3 +52,5 @@ For `www.coytampa.com`:
 Replace `YOUR-GITHUB-USERNAME` with the GitHub account that owns the repository.
 
 DNS changes can take up to 24 hours.
+
+Publish trigger: 2026-06-10 permissions fix.
