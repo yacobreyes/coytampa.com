@@ -682,3 +682,8 @@ textarea:focus {
 .contact-card > strong {
     display: none;
 }
+
+
+.hero-bg {
+    background-image: url("./assets/Hero.jpg") !important;
+}
