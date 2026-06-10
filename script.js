@@ -15,7 +15,7 @@ const defaultSiteContent = {
     eyebrow: "Welcome home",
     title: "C.O.Y. Tampa, Casa Del Alfarero",
     copy:
-      "We are a Messianic congregation in Tampa, Florida. We observe Shabbat and the Biblical Feasts."
+      "We are a Messianic congregation in Tampa, Florida."
   },
   services: [
     {
