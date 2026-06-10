@@ -687,3 +687,13 @@ textarea:focus {
 .hero-bg {
     background-image: url("./assets/Hero.jpg") !important;
 }
+
+
+.contact-card p {
+    font-size: 0;
+}
+
+.contact-card p::before {
+    content: "Stay in the know about all our services and events";
+    font-size: 1.05rem;
+}
