@@ -671,3 +671,8 @@ textarea:focus {
 .gallery-follow [data-content="gallery.followSuffix"] {
     display: inline;
 }
+
+
+.gallery-follow span {
+    display: inline !important;
+}
