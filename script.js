@@ -50,24 +50,16 @@ const defaultSiteContent = {
     followSuffix: "for more.",
     photos: [
       {
-        caption: "Biblical Feasts",
-        media_url: "/assets/facebook/facebook-01.jpg"
+        caption: "Men's Ministry",
+        media_url: "/assets/facebook/facebook-05.jpg"
       },
       {
-        caption: "Youth service",
-        media_url: "/assets/facebook/facebook-02.jpg"
-      },
-      {
-        caption: "Women's ministry",
+        caption: "Women's Ministry",
         media_url: "/assets/facebook/facebook-03.jpg"
       },
       {
-        caption: "Congregational service",
-        media_url: "/assets/facebook/facebook-04.jpg"
-      },
-      {
-        caption: "Men's ministry",
-        media_url: "/assets/facebook/facebook-05.jpg"
+        caption: "Youth Ministry",
+        media_url: "/assets/facebook/facebook-02.jpg"
       },
       {
         caption: "Missionary outreach",
