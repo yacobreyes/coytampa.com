@@ -77,7 +77,7 @@
           <div>
             <p data-content="about.paragraphs.0">
               Casa Del Alfarero means the Potter's House. We are a Messianic congregation
-              observing the Biblical Feasts, Shabbat, and a life of worship rooted in Scripture.
+              that observes the Biblical Feasts and Shabbat, living a life of worship rooted in Scripture.
             </p>
             <p data-content="about.paragraphs.1">
               Whether you are visiting for the first time or looking for a congregation in Tampa,
@@ -117,9 +117,9 @@
             <p class="gallery-follow">
               <span data-content="gallery.followPrefix">Follow us on</span>
               <a href="https://www.instagram.com/coytampa/" target="_blank" rel="noreferrer">
-                @coytampa
+                Instagram
               </a>
-              <span data-content="gallery.followSuffix">for more.</span>
+              <span data-content="gallery.followSuffix"></span>
             </p>
           </div>
         </div>
@@ -133,18 +133,29 @@
           <h2 data-content="contact.heading">Connect with us.</h2>
         </div>
         <div class="contact-layout">
-          <form class="contact-form" data-contact-form>
+          <div class="contact-info">
+            <strong>C.O.Y. Tampa, Casa Del Alfarero</strong>
+            <div>
+              <span>Address</span>
+              <p>710 Crenshaw Lake Rd.<br />Lutz, Florida 33548</p>
+            </div>
+            <div>
+              <span>Phone</span>
+              <p><a href="tel:+181324548121">(813) 245-48121</a></p>
+            </div>
+          </div>
+          <form class="contact-form is-hidden" data-contact-form>
             <label>
               Name
-              <input type="text" name="name" autocomplete="name" required />
+              <input type="text" name="name" autocomplete="name" />
             </label>
             <label>
               Phone
-              <input type="tel" name="phone" autocomplete="tel" required />
+              <input type="tel" name="phone" autocomplete="tel" />
             </label>
             <label>
               Message
-              <textarea name="message" rows="5" required></textarea>
+              <textarea name="message" rows="5"></textarea>
             </label>
             <button class="button primary" type="submit">Send Message</button>
             <p class="form-note" data-contact-note></p>
