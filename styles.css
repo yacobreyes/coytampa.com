@@ -666,3 +666,8 @@ textarea:focus {
 .gallery-follow [data-content="gallery.followSuffix"] {
   display: none;
 }
+
+
+.gallery-follow [data-content="gallery.followSuffix"] {
+    display: inline;
+}
