@@ -33,7 +33,7 @@
     "eyebrow": "Photo gallery",
     "heading": "Life at Casa Del Alfarero",
     "followPrefix": "Follow us on",
-    "followSuffix": "",
+    "followSuffix": "to see more.",
     "photos": [
       {
         "caption": "Men's Ministry",
@@ -55,7 +55,7 @@
   },
   "contact": {
     "eyebrow": "Contact",
-    "heading": "Visit us.",
+    "heading": "Worship with us!",
     "cardTitle": "C.O.Y. Tampa, Casa Del Alfarero",
     "cardText": "710 Crenshaw Lake Rd. Lutz, Florida 33548\n(813) 245-48121"
   }
