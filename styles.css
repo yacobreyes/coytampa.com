@@ -697,3 +697,12 @@ textarea:focus {
     content: "Stay in the know about all our services and events";
     font-size: 1.05rem;
 }
+
+
+.gallery-follow a {
+      font-size: inherit;
+}
+
+.gallery-follow a::after {
+      content: none;
+}
